@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>thispring studio</title>
+  <meta name="description" content="게임의 본질인 ‘행위성(Agency)’을 탐구하는 인디 게임 스튜디오, thispring studio">
+
+  <!-- 링크 공유 미리보기 (og-image.png 추가 필요) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="thispring studio">
+  <meta property="og:description" content="게임의 본질인 ‘행위성(Agency)’을 탐구하는 인디 게임 스튜디오">
+  <meta property="og:image" content="https://thispring.github.io/assets/og-image.png">
+  <meta property="og:url" content="https://thispring.github.io/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- 언어를 렌더링 전에 결정해 깜빡임 방지 -->
+  <script>
+    (function () {
+      var lang;
+      try { lang = localStorage.getItem('lang'); } catch (e) {}
+      if (lang !== 'ko' && lang !== 'en') {
+        lang = (navigator.language || 'ko').toLowerCase().indexOf('ko') === 0 ? 'ko' : 'en';
+      }
+      document.documentElement.lang = lang;
+    })();
+  </script>
+  <script src="main.js" defer></script>
+</head>
+<body id="top">
+
+  <!-- ===== Navigation ===== -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="#top" aria-label="thispring studio">
+        <svg class="logo-mark" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 21v-8M12 13c0-4-3-7-8-7 0 4 3 7 8 7zM12 11c0-3.5 2.5-6 7-6 0 3.5-2.5 6-7 6z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        thispring studio
+      </a>
+
+      <nav class="menu" id="menu">
+        <a href="#about"><span data-lang="ko">소개</span><span data-lang="en">About</span></a>
+        <a href="#games"><span data-lang="ko">게임</span><span data-lang="en">Games</span></a>
+        <a href="#contact"><span data-lang="ko">연락처</span><span data-lang="en">Contact</span></a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" data-set-lang="ko">KO</button>
+          <button type="button" data-set-lang="en">EN</button>
+        </div>
+        <button class="nav-toggle" type="button" aria-controls="menu" aria-expanded="false" aria-label="Menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow">Independent Game Studio</p>
+          <h1>
+            <span data-lang="ko">이 콘텐츠는 왜<br>게임이어야 할까요?</span>
+            <span data-lang="en">Why must this<br>be a game?</span>
+          </h1>
+          <p class="lead">
+            <span data-lang="ko">thispring studio는 게임의 본질인 ‘행위성(Agency)’을 탐구하는 인디 게임 스튜디오입니다.</span>
+            <span data-lang="en">thispring studio is an indie game studio dedicated to exploring the essence of gaming: Agency.</span>
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#games">
+              <span data-lang="ko">게임 보기</span><span data-lang="en">See our games</span>
+            </a>
+            <a class="btn btn-ghost" href="#contact">
+              <span data-lang="ko">커뮤니티 참여</span><span data-lang="en">Join the community</span>
+            </a>
+          </div>
+        </div>
+        <div class="hero-art" role="img" aria-label="Key art placeholder">
+          <span>KEY ART<br><small>1600 × 1000</small></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section class="section" id="about">
+      <div class="container about">
+        <div class="section-head">
+          <p class="eyebrow">About</p>
+          <h2><span data-lang="ko">스튜디오 소개</span><span data-lang="en">The Studio</span></h2>
+        </div>
+        <div class="about-body">
+          <p data-lang="ko">
+            thispring studio는 게임의 본질인 ‘행위성(Agency)’을 탐구하는 인디 게임 스튜디오입니다.
+            우리는 게임이 다른 예술 형식과 차별화되는 지점이 바로 플레이어의 행위에 있다고 믿습니다.
+            따라서 프로젝트의 시작점에서 항상 “이 콘텐츠가 반드시 게임이어야 하는 이유는 무엇인가?”라는 질문을 던지며
+            그 해답을 찾아 나갑니다.
+          </p>
+          <p data-lang="ko">
+            우리는 예술이라는 이름 아래 거창한 프로젝트만을 고집하지 않습니다. 장르와 스타일을 넘어 게임만의 행위성이
+            가장 잘 발현될 수 있는 최적의 형식을 고민합니다. 특히 과거의 기술적 제약 안에서 플레이어가 직접 체득하며
+            재미를 느꼈던 방식들을 오마주하며, 시각 예술과 인문학, 음악의 미학이 게임이라는 매체를 통해 플레이어에게
+            어떻게 전달되는지를 심도 있게 연구합니다.
+          </p>
+          <p data-lang="ko">
+            고대 그리스 시대에 ‘예술(Art)’이 ‘기술(Techne)’과 같은 의미로 쓰였듯, 예술과 기술의 접점은 본질적입니다.
+            thispring studio는 이러한 본질을 탐구하며 기술의 변화를 예술적 성취로 승화시키는 스튜디오가 되고자 합니다.
+          </p>
+
+          <p data-lang="en">
+            thispring studio is an indie game studio dedicated to exploring the essence of gaming: Agency.
+            We believe that the defining characteristic of games, distinguishing them from all other art forms,
+            lies in the player's capacity for action. Consequently, every project begins with a fundamental inquiry:
+            “Why must this content be realized specifically as a game?”
+          </p>
+          <p data-lang="en">
+            We do not limit our definition of art to grand or solemn projects. Instead, we strive to find the optimal
+            format where agency can flourish, transcending the boundaries of genre and style. By paying homage to the era
+            of technical constraints—where players learned through direct engagement—we deeply study how visual arts,
+            humanities, and musical aesthetics are perceived by players through the medium of games.
+          </p>
+          <p data-lang="en">
+            Just as the word ‘Art’ was synonymous with ‘Techne’ (technology) in Ancient Greece, we believe the
+            intersection of art and technology is foundational. thispring studio aims to explore this essential bond,
+            elevating technological evolution into meaningful artistic achievement.
+          </p>
+
+          <dl class="facts">
+            <div>
+              <dt><span data-lang="ko">게임의 본질, 행위성</span><span data-lang="en">The essence of games</span></dt>
+              <dd>Agency</dd>
+            </div>
+            <div>
+              <dt><span data-lang="ko">기술적 제약에 대한 오마주</span><span data-lang="en">Tribute to technical constraints</span></dt>
+              <dd>Homage</dd>
+            </div>
+            <div>
+              <dt><span data-lang="ko">예술과 기술의 접점</span><span data-lang="en">Where art meets technology</span></dt>
+              <dd>Techne</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Games ===== -->
+    <section class="section section-tint" id="games">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Games</p>
+          <h2><span data-lang="ko">우리가 만든 게임</span><span data-lang="en">Our Games</span></h2>
+        </div>
+
+        <div class="game-grid">
+          <!-- 게임 카드: 복사해서 추가하세요 (아래 3개는 예시 데이터) -->
+          <article class="card">
+            <div class="thumb thumb-1" role="img" aria-label="Moss Tales capsule"><span>Moss Tales</span></div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="badge badge-released"><span data-lang="ko">출시</span><span data-lang="en">Released</span></span>
+                <span class="genre"><span data-lang="ko">어드벤처 · 퍼즐</span><span data-lang="en">Adventure · Puzzle</span></span>
+              </div>
+              <h3>Moss Tales</h3>
+              <p>
+                <span data-lang="ko">이끼로 뒤덮인 숲에서 잃어버린 기억 조각을 찾아가는 짧은 퍼즐 어드벤처.</span>
+                <span data-lang="en">A short puzzle adventure about finding lost memories in a moss-covered forest.</span>
+              </p>
+              <div class="stores">
+                <a class="store" href="https://store.steampowered.com/" target="_blank" rel="noopener">Steam</a>
+                <a class="store" href="https://store.onstove.com/" target="_blank" rel="noopener">STOVE</a>
+                <a class="store" href="https://itch.io/" target="_blank" rel="noopener">itch.io</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb thumb-2" role="img" aria-label="Lantern Garden capsule"><span>Lantern Garden</span></div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="badge badge-early"><span data-lang="ko">얼리 액세스</span><span data-lang="en">Early Access</span></span>
+                <span class="genre"><span data-lang="ko">힐링 · 경영</span><span data-lang="en">Cozy · Management</span></span>
+              </div>
+              <h3>Lantern Garden</h3>
+              <p>
+                <span data-lang="ko">밤에만 피는 꽃을 키우며 작은 정원을 가꾸는 힐링 경영 게임.</span>
+                <span data-lang="en">A cozy management game about tending a garden of flowers that bloom only at night.</span>
+              </p>
+              <div class="stores">
+                <a class="store" href="https://store.steampowered.com/" target="_blank" rel="noopener">Steam</a>
+                <a class="store" href="https://itch.io/" target="_blank" rel="noopener">itch.io</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb thumb-3" role="img" aria-label="Tiny Harbor capsule"><span>Tiny Harbor</span></div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="badge badge-dev"><span data-lang="ko">개발 중</span><span data-lang="en">In Development</span></span>
+                <span class="genre"><span data-lang="ko">시뮬레이션</span><span data-lang="en">Simulation</span></span>
+              </div>
+              <h3>Tiny Harbor</h3>
+              <p>
+                <span data-lang="ko">바다 위 작은 항구 마을을 일구는 아기자기한 시뮬레이션. 2027년 출시 예정.</span>
+                <span data-lang="en">A charming sim about building a tiny harbor town at sea. Coming 2027.</span>
+              </p>
+              <div class="stores">
+                <a class="store store-primary" href="https://store.steampowered.com/" target="_blank" rel="noopener">
+                  <span data-lang="ko">Steam 위시리스트</span><span data-lang="en">Wishlist on Steam</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section class="section" id="contact">
+      <div class="container contact">
+        <div class="section-head">
+          <p class="eyebrow">Contact</p>
+          <h2><span data-lang="ko">함께 이야기해요</span><span data-lang="en">Let's talk</span></h2>
+          <p class="section-desc">
+            <span data-lang="ko">개발 소식과 테스트 모집은 디스코드에서 가장 먼저 알려드려요.</span>
+            <span data-lang="en">Dev updates and playtest invites land on our Discord first.</span>
+          </p>
+        </div>
+
+        <div class="contact-body">
+          <a class="btn btn-primary btn-lg" href="https://discord.com/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            <span data-lang="ko">디스코드 참여하기</span><span data-lang="en">Join our Discord</span>
+          </a>
+
+          <ul class="socials">
+            <li>
+              <a href="https://x.com/" target="_blank" rel="noopener" aria-label="X">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://youtube.com/" target="_blank" rel="noopener" aria-label="YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10 9l5 3-5 3z" fill="currentColor"/></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></svg>
+              </a>
+            </li>
+          </ul>
+
+          <p class="mail">
+            <span data-lang="ko">비즈니스 문의</span><span data-lang="en">Business inquiries</span>
+            <a href="mailto:hello@studio.example">hello@studio.example</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year">2026</span> thispring studio</span>
+      <a href="#top"><span data-lang="ko">맨 위로 ↑</span><span data-lang="en">Back to top ↑</span></a>
+    </div>
+  </footer>
+
+</body>
+</html>
