@@ -156,19 +156,13 @@ html[lang="en"] [data-lang="ko"] { display: none !important; }
 .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
 
 .hero-art {
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 9;
   border-radius: 20px;
   border: 1px solid var(--line);
-  background: linear-gradient(135deg, #d6f0c6 0%, #b9e0a5 55%, #9ccd87 100%);
-  display: grid;
-  place-items: center;
-  text-align: center;
-  color: var(--accent-strong);
-  font-weight: var(--w-bold);
-  letter-spacing: .1em;
-  line-height: 1.4;
+  overflow: hidden;
+  background: var(--surface);
 }
-.hero-art small { font-weight: var(--w-ui); letter-spacing: .04em; opacity: .75; }
+.hero-art img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 /* ========== Sections ========== */
 .section { padding: var(--section-y) 0; }
@@ -210,20 +204,16 @@ html[lang="en"] [data-lang="ko"] { display: none !important; }
 }
 .card:hover { border-color: #b4d6a3; }
 
-/* Steam 캡슐 비율 460x215 */
+/* 게임 스크린샷 (16:9) */
 .thumb {
-  aspect-ratio: 460 / 215;
-  display: grid;
-  place-items: center;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
   border-bottom: 1px solid var(--line);
-  color: var(--accent-strong);
-  font-weight: var(--w-bold);
-  font-size: 22px;
-  letter-spacing: -0.01em;
+  background: var(--mint);
 }
-.thumb-1 { background: linear-gradient(135deg, #e3f5d8, #b8dfa3); }
-.thumb-2 { background: linear-gradient(135deg, #f1faeb, #cfe9bf 60%, #a9d493); }
-.thumb-3 { background: linear-gradient(135deg, #e6f6ee, #bfe3cf); }
 
 .card-body { display: flex; flex-direction: column; gap: 10px; padding: 22px 22px 24px; flex: 1; }
 .card-meta { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
