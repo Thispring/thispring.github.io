@@ -18,20 +18,22 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;400;700&display=swap">
-  <link rel="stylesheet" href="style.css?v=2">
+  <meta name="color-scheme" content="light dark">
+  <link rel="stylesheet" href="style.css?v=3">
 
-  <!-- 언어를 렌더링 전에 결정해 깜빡임 방지 -->
+  <!-- 언어·테마를 렌더링 전에 결정해 깜빡임 방지 -->
   <script>
     (function () {
-      var lang;
-      try { lang = localStorage.getItem('lang'); } catch (e) {}
+      var lang, theme;
+      try { lang = localStorage.getItem('lang'); theme = localStorage.getItem('theme'); } catch (e) {}
       if (lang !== 'ko' && lang !== 'en') {
         lang = (navigator.language || 'ko').toLowerCase().indexOf('ko') === 0 ? 'ko' : 'en';
       }
       document.documentElement.lang = lang;
+      if (theme === 'light' || theme === 'dark') document.documentElement.dataset.theme = theme;
     })();
   </script>
-  <script src="main.js?v=2" defer></script>
+  <script src="main.js?v=3" defer></script>
 </head>
 <body id="top">
 
@@ -53,6 +55,11 @@
           <button type="button" data-set-lang="ko">KO</button>
           <button type="button" data-set-lang="en">EN</button>
         </div>
+        <button class="theme-toggle" type="button" data-mode="system" aria-label="Theme">
+          <svg class="icon-system" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg>
+          <svg class="icon-light" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <svg class="icon-dark" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        </button>
         <button class="nav-toggle" type="button" aria-controls="menu" aria-expanded="false" aria-label="Menu">
           <span></span><span></span>
         </button>
@@ -173,7 +180,7 @@
                 <span data-lang="en">A casual multiplayer party game where absurd physics turn every match into a brawl. Coming 2027.</span>
               </p>
               <div class="stores">
-                <a class="store" href="https://store.onstove.com/ko/games/105669" target="_blank" rel="noopener">STOVE</a>
+                <a class="store" href="https://store.steampowered.com/app/5398380/Robo_Dream_Party/" target="_blank" rel="noopener">Steam</a>
                 <a class="store" href="https://thispringstudio.itch.io/robo-dream-party" target="_blank" rel="noopener">itch.io</a>
               </div>
             </div>
