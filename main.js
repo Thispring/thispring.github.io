@@ -116,6 +116,9 @@
 
   if (!reduceMotion.matches) setInterval(createBlip, 2600);
 
+  // ----- 3D 글자 -----
+  Hero3D.start(document.querySelector('.hud'), reduceMotion.matches);
+
   // ----- 정렬 시각화 -----
   var sorter = document.querySelector('.sorter');
   if (reduceMotion.matches) SortViz.showStatic(sorter);

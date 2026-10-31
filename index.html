@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=VT323&display=swap">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galmuri@2.40.3/dist/galmuri.css">
   <meta name="color-scheme" content="dark">
-  <link rel="stylesheet" href="style.css?v=5">
+  <link rel="stylesheet" href="style.css?v=6">
 
   <!-- 언어를 렌더링 전에 결정해 깜빡임 방지 -->
   <script>
@@ -32,8 +32,9 @@
       document.documentElement.lang = lang;
     })();
   </script>
-  <script src="sort.js?v=5" defer></script>
-  <script src="main.js?v=5" defer></script>
+  <script src="sort.js?v=6" defer></script>
+  <script src="hero3d.js?v=6" defer></script>
+  <script src="main.js?v=6" defer></script>
 </head>
 <body id="top">
 
@@ -67,6 +68,9 @@
     <main>
       <!-- ===== 3. HUD: 회전 링 + 핵심 메시지 ===== -->
       <section class="hud">
+        <!-- 3D 글자: 스크립트가 켜지면 아래 .hud-core는 스크린리더·키보드용으로 숨긴다 -->
+        <canvas class="hud-3d" aria-hidden="true"></canvas>
+
         <svg class="rings" viewBox="0 0 600 600" aria-hidden="true">
           <defs>
             <path id="ring-text" d="M300 300m-224 0a224 224 0 1 1 448 0a224 224 0 1 1-448 0"/>
