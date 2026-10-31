@@ -116,6 +116,11 @@
 
   if (!reduceMotion.matches) setInterval(createBlip, 2600);
 
+  // ----- 정렬 시각화 -----
+  var sorter = document.querySelector('.sorter');
+  if (reduceMotion.matches) SortViz.showStatic(sorter);
+  else SortViz.start(sorter);
+
   // ----- 연도 -----
   document.getElementById('year').textContent = new Date().getFullYear();
 })();
