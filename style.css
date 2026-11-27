@@ -443,3 +443,16 @@ h1 {
   .ring, .glitch span, .window, .window.closing { animation: none; }
   #radar { display: none; }
 }
+
+/* ----- 스크린샷 슬라이더 ----- */
+.slider { position: relative; cursor: pointer; }
+.slides { position: relative; aspect-ratio: 16 / 9; overflow: hidden; }
+.slides img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .3s; }
+.slides img.on { opacity: 1; }
+.slide-btn { position: absolute; top: 50%; width: 26px; height: 34px; margin-top: -17px; padding: 0; border: 0; background: rgba(0, 0, 0, .55); color: #fff; font-size: 12px; cursor: pointer; }
+.slide-btn:hover, .slide-btn:focus-visible { background: rgba(0, 0, 0, .85); }
+.slide-btn.prev { left: 2px; }
+.slide-btn.next { right: 2px; }
+.slide-state { position: absolute; right: 6px; bottom: 6px; padding: 0 5px; background: rgba(0, 0, 0, .6); color: #fff; font: 11px/1.6 var(--font-small); }
+.slider.paused .slide-state::before { content: "\275A\275A  "; }
+@media (prefers-reduced-motion: reduce) { .slides img { transition: none; } }

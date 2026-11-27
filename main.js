@@ -124,6 +124,37 @@
   if (reduceMotion.matches) SortViz.showStatic(sorter);
   else SortViz.start(sorter);
 
+  // ----- 스크린샷 슬라이더: 2초 자동 넘김, 클릭 시 정지/재생, 화살표 버튼 -----
+  document.querySelectorAll('[data-slider]').forEach(function (box) {
+    var imgs = box.querySelectorAll('.slides img');
+    var state = box.querySelector('.slide-state');
+    var idx = 0;
+    var paused = reduceMotion.matches;
+    var timer = null;
+
+    function show(n) {
+      imgs[idx].classList.remove('on');
+      idx = (n + imgs.length) % imgs.length;
+      imgs[idx].classList.add('on');
+      state.textContent = (idx + 1) + ' / ' + imgs.length;
+    }
+    function restart() {
+      clearInterval(timer);
+      if (!paused) timer = setInterval(function () { show(idx + 1); }, 2000);
+    }
+    function setPaused(p) {
+      paused = p;
+      box.classList.toggle('paused', p);
+      restart();
+    }
+
+    box.querySelector('.prev').addEventListener('click', function (e) { e.stopPropagation(); show(idx - 1); restart(); });
+    box.querySelector('.next').addEventListener('click', function (e) { e.stopPropagation(); show(idx + 1); restart(); });
+    box.addEventListener('click', function () { setPaused(!paused); });
+    show(0);
+    setPaused(paused);
+  });
+
   // ----- 연도 -----
   document.getElementById('year').textContent = new Date().getFullYear();
 })();
